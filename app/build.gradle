@@ -50,5 +50,4 @@ dependencies {
 
     ksp project(":lib_compiler")
     implementation project(":lib_api")
-    implementation project(":lib_annotation")
 }
