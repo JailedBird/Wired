@@ -1,0 +1,1 @@
+-keep class * implements com.jailedbird.wired.lib_api.template.ISyringe{*;}

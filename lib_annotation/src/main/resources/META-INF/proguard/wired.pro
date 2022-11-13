@@ -1,0 +1,1 @@
+-keepnames class com.jailedbird.wired.lib_annotation.model.TypeWrapper

@@ -1,0 +1,28 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+    id 'com.github.dcendents.android-maven'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        freeCompilerArgs += "-opt-in=kotlin.RequiresOptIn"
+        freeCompilerArgs += "-Xjvm-default=all-compatibility"
+    }
+}
+
+dependencies {
+    implementation project(":lib_annotation")
+
+    // ksp https://github.com/google/ksp/releases/tag/1.6.10-1.0.8
+    implementation 'com.google.devtools.ksp:symbol-processing-api:1.6.10-1.0.4'
+    // https://square.github.io/kotlinpoet/
+    implementation("com.squareup:kotlinpoet:1.11.0")
+    implementation("com.squareup:kotlinpoet-ksp:1.11.0")
+    implementation("com.squareup:kotlinpoet-metadata:1.11.0")
+}
