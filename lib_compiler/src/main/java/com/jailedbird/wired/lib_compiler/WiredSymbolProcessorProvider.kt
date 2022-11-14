@@ -65,7 +65,7 @@ class WiredSymbolProcessorProvider : SymbolProcessorProvider {
             for (element in elements) {
                 // Class of the member
                 logger.check(element.parentDeclaration is KSClassDeclaration) {
-                    "Property annotated with @needNotice = false 's enclosingElement(property's class) must be non-null!"
+                    "Property annotated with @Wired 's enclosingElement(property's class) must be non-null!"
                 }
                 val parent = element.parentDeclaration as KSClassDeclaration
 
@@ -86,7 +86,7 @@ class WiredSymbolProcessorProvider : SymbolProcessorProvider {
                     "@Wired now can only annotated in kotlin file, ${it.key.qualifiedName?.asString()} is not a java class"
                 }
             }
-            logger.info("@needNotice = false categories finished.")
+            logger.info("@Wired categories finished.")
             return parentAndChildren
         }
 
@@ -104,7 +104,7 @@ class WiredSymbolProcessorProvider : SymbolProcessorProvider {
                 val children: List<KSPropertyDeclaration> = entry.value
                 if (children.isEmpty()) continue
                 logger.info(">>> Start process " + children.size + " field in " + parent.simpleName.asString() + " ... <<<")
-                // Get input source (@needNotice = false) which gene the output file
+                // Get input source (@Wired) which gene the output file
                 val dependency = mutableSetOf<KSFile>()
                 parent.containingFile?.let {
                     dependency.add(it)
