@@ -1,7 +1,6 @@
 plugins {
     id 'java-library'
     id 'org.jetbrains.kotlin.jvm'
-    id 'com.github.dcendents.android-maven'
 }
 
 java {
@@ -26,3 +25,5 @@ dependencies {
     implementation("com.squareup:kotlinpoet-ksp:1.11.0")
     implementation("com.squareup:kotlinpoet-metadata:1.11.0")
 }
+
+apply from:rootProject.file("gradle/maven-publish.gradle")

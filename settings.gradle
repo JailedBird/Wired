@@ -1,4 +1,4 @@
-/*pluginManagement {
+pluginManagement {
     repositories {
         gradlePluginPortal()
         google()
@@ -13,7 +13,7 @@ dependencyResolutionManagement {
         mavenCentral()
         maven { url 'https://jitpack.io' }
     }
-}*/
+}
 rootProject.name = "Wired"
 include ':app'
 include ':lib_annotation'
