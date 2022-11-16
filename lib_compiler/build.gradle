@@ -6,6 +6,11 @@ plugins {
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
+
+    // A simple method add source code and doc for java library
+    // https://docs.gradle.org/current/userguide/publishing_setup.html
+    // withJavadocJar()
+    // withSourcesJar()
 }
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
@@ -26,4 +31,18 @@ dependencies {
     implementation("com.squareup:kotlinpoet-metadata:1.11.0")
 }
 
-apply from:rootProject.file("gradle/maven-publish.gradle")
+apply from: rootProject.file("gradle/maven-publish.gradle")
+/*
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "java".
+            release(MavenPublication) {
+                from components.java
+                groupId = GROUP_ID
+                artifactId = ARTIFACT_ID
+                version = VERSION
+            }
+        }
+    }
+}*/

@@ -6,6 +6,7 @@ plugins {
 android {
     compileSdk 29
 
+
     defaultConfig {
         minSdk 21
         targetSdk 28
@@ -27,6 +28,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 }
 
 dependencies {
@@ -38,4 +40,4 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
 
-apply from:rootProject.file("gradle/maven-publish.gradle")
+apply from: rootProject.file("gradle/maven-publish.gradle")

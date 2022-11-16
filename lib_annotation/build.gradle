@@ -6,6 +6,8 @@ plugins {
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
+    // withJavadocJar()
+    // withSourcesJar()
 }
 
-apply from:rootProject.file("gradle/maven-publish.gradle")
+apply from: rootProject.file("gradle/maven-publish.gradle")
