@@ -1,4 +1,9 @@
-# Wired Tutorial
+# Wired
+
+[![](https://jitpack.io/v/JailedBird/Wired.svg)](https://jitpack.io/#JailedBird/Wired)
+
+
+
 ## 项目简介
 
 基于[KSP]( https://kotlinlang.org/docs/ksp-overview.html)实现简化版本的Arouter Autowired实现， 功能完全相同
@@ -62,7 +67,7 @@ implementation 'com.github.JailedBird.Wired:lib_api:0.9.9'
 ksp 'com.github.JailedBird.Wired:lib_compiler:0.9.9'
 ```
 
-点击此处查询[最新版本](https://github.com/JailedBird/Wired/tags)
+[![](https://jitpack.io/v/JailedBird/Wired.svg)](https://jitpack.io/#JailedBird/Wired)
 
 类似Arouter的结构，Wired分为三个模块 
 
@@ -251,9 +256,7 @@ public class `SecondActivity$$Wired$$Autowired` : ISyringe {
 
 ```
 
-
-
-### 注入
+在合适的时机获取参数
 
 ```
  override fun onCreate(savedInstanceState: Bundle?) {
