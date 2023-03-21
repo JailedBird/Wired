@@ -23,11 +23,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun gotoSecond() {
         val bundle = WiredBuilder.Builder()
-            .withString("name", "abelzhao")
+            .withString("name", "abelzhao111")
             .withInt("age", 23)
             .withObject("testObj", TestObj("p1", "p2"))
             .withObject("nameList", listOf("1", "2", "3"))
-            .withParcelable("testParcelable", TestParcelable("p1", "p2"))
+            //.withParcelable("testParcelable", TestParcelable("p1", "p2"))
             .withObject(
                 "testParcelableList",
                 listOf(

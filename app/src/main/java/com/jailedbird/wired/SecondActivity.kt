@@ -14,7 +14,7 @@ import com.jailedbird.wired.model.TestSerializable
 
 class SecondActivity : AppCompatActivity() {
     companion object {
-        private const val TAG = "SecondActivity"
+        private const val TAG = "SecondActivity1"
     }
 
     @Wired(required = true)
